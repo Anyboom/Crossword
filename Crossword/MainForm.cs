@@ -1,8 +1,12 @@
-﻿using System;
+﻿using CsvHelper;
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,14 +23,23 @@ namespace Crossword
 
         private void CreateButton_Click(object sender, EventArgs e)
         {
-            Generator crossWord = new Generator(textBox1.Lines, Convert.ToInt32(textBox4.Text), Convert.ToInt32(textBox4.Text));
+            Generator crossWord = new Generator(WordsTextBox.Lines, Convert.ToInt32(SizeGridTextBox.Text), Convert.ToInt32(SizeGridTextBox.Text));
 
             crossWord.Generate();
 
-            textBox2.Text = String.Join(Environment.NewLine, crossWord.ListOfUseWords);
-            textBox3.Text = String.Join(Environment.NewLine, crossWord.ListOfExcessWords);
+            UseWordsTextBox.Text = String.Join(Environment.NewLine, crossWord.ListOfUseWords);
+            ExcessWordsTextBox.Text = String.Join(Environment.NewLine, crossWord.ListOfExcessWords);
 
-            pictureBox1.Image = Extensions.ToImage(crossWord.Field);
+            string pathCsvFile = "result.csv";
+
+            for (int i = 0; i < crossWord.Field.GetLength(0); i++)
+            {
+                for (int j = 0; j < crossWord.Field.GetLength(1); j++)
+                {
+                    File.AppendAllText(pathCsvFile, crossWord.Field[i, j] + ";", Encoding.UTF8);
+                }
+                File.AppendAllText(pathCsvFile, Environment.NewLine, Encoding.UTF8);
+            }
         }
     }
 }

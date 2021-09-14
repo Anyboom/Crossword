@@ -29,82 +29,81 @@ namespace Crossword
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.MainGroup = new System.Windows.Forms.GroupBox();
+            this.SizeGridTextBox = new System.Windows.Forms.TextBox();
+            this.SizeGridLabel = new System.Windows.Forms.Label();
+            this.ExcessWordsLabel = new System.Windows.Forms.Label();
+            this.UseWordsLabel = new System.Windows.Forms.Label();
+            this.WordsLabel = new System.Windows.Forms.Label();
             this.CreateButton = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.ExcessWordsTextBox = new System.Windows.Forms.TextBox();
+            this.UseWordsTextBox = new System.Windows.Forms.TextBox();
+            this.WordsTextBox = new System.Windows.Forms.TextBox();
+            this.MainGroup.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // MainGroup
             // 
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.CreateButton);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.groupBox1.Size = new System.Drawing.Size(521, 300);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
+            this.MainGroup.Controls.Add(this.SizeGridTextBox);
+            this.MainGroup.Controls.Add(this.SizeGridLabel);
+            this.MainGroup.Controls.Add(this.ExcessWordsLabel);
+            this.MainGroup.Controls.Add(this.UseWordsLabel);
+            this.MainGroup.Controls.Add(this.WordsLabel);
+            this.MainGroup.Controls.Add(this.CreateButton);
+            this.MainGroup.Controls.Add(this.ExcessWordsTextBox);
+            this.MainGroup.Controls.Add(this.UseWordsTextBox);
+            this.MainGroup.Controls.Add(this.WordsTextBox);
+            this.MainGroup.Location = new System.Drawing.Point(12, 12);
+            this.MainGroup.Name = "MainGroup";
+            this.MainGroup.Padding = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.MainGroup.Size = new System.Drawing.Size(521, 300);
+            this.MainGroup.TabIndex = 0;
+            this.MainGroup.TabStop = false;
             // 
-            // textBox4
+            // SizeGridTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(103, 267);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(70, 23);
-            this.textBox4.TabIndex = 8;
+            this.SizeGridTextBox.Location = new System.Drawing.Point(103, 267);
+            this.SizeGridTextBox.Name = "SizeGridTextBox";
+            this.SizeGridTextBox.Size = new System.Drawing.Size(70, 23);
+            this.SizeGridTextBox.TabIndex = 8;
+            this.SizeGridTextBox.Text = "10";
             // 
-            // label4
+            // SizeGridLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 270);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 15);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Размер клетки:";
+            this.SizeGridLabel.AutoSize = true;
+            this.SizeGridLabel.Location = new System.Drawing.Point(13, 270);
+            this.SizeGridLabel.Name = "SizeGridLabel";
+            this.SizeGridLabel.Size = new System.Drawing.Size(83, 15);
+            this.SizeGridLabel.TabIndex = 7;
+            this.SizeGridLabel.Text = "Размер сетки:";
             // 
-            // label3
+            // ExcessWordsLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(351, 28);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 15);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Слова, которых нет:";
+            this.ExcessWordsLabel.AutoSize = true;
+            this.ExcessWordsLabel.Location = new System.Drawing.Point(351, 28);
+            this.ExcessWordsLabel.Name = "ExcessWordsLabel";
+            this.ExcessWordsLabel.Size = new System.Drawing.Size(118, 15);
+            this.ExcessWordsLabel.TabIndex = 6;
+            this.ExcessWordsLabel.Text = "Слова, которых нет:";
             // 
-            // label2
+            // UseWordsLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(179, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 15);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Слова, которые есть:";
+            this.UseWordsLabel.AutoSize = true;
+            this.UseWordsLabel.Location = new System.Drawing.Point(179, 28);
+            this.UseWordsLabel.Name = "UseWordsLabel";
+            this.UseWordsLabel.Size = new System.Drawing.Size(123, 15);
+            this.UseWordsLabel.TabIndex = 5;
+            this.UseWordsLabel.Text = "Слова, которые есть:";
             // 
-            // label1
+            // WordsLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 28);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 15);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Слова:";
+            this.WordsLabel.AutoSize = true;
+            this.WordsLabel.Location = new System.Drawing.Point(13, 28);
+            this.WordsLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.WordsLabel.Name = "WordsLabel";
+            this.WordsLabel.Size = new System.Drawing.Size(44, 15);
+            this.WordsLabel.TabIndex = 4;
+            this.WordsLabel.Text = "Слова:";
             // 
             // CreateButton
             // 
@@ -116,71 +115,61 @@ namespace Crossword
             this.CreateButton.UseVisualStyleBackColor = true;
             this.CreateButton.Click += new System.EventHandler(this.CreateButton_Click);
             // 
-            // textBox3
+            // ExcessWordsTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(351, 46);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(157, 213);
-            this.textBox3.TabIndex = 2;
+            this.ExcessWordsTextBox.Location = new System.Drawing.Point(351, 46);
+            this.ExcessWordsTextBox.Multiline = true;
+            this.ExcessWordsTextBox.Name = "ExcessWordsTextBox";
+            this.ExcessWordsTextBox.Size = new System.Drawing.Size(157, 213);
+            this.ExcessWordsTextBox.TabIndex = 2;
             // 
-            // textBox2
+            // UseWordsTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(179, 46);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(166, 213);
-            this.textBox2.TabIndex = 1;
+            this.UseWordsTextBox.Location = new System.Drawing.Point(179, 46);
+            this.UseWordsTextBox.Multiline = true;
+            this.UseWordsTextBox.Name = "UseWordsTextBox";
+            this.UseWordsTextBox.Size = new System.Drawing.Size(166, 213);
+            this.UseWordsTextBox.TabIndex = 1;
             // 
-            // textBox1
+            // WordsTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 46);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 213);
-            this.textBox1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(541, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(430, 300);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.WordsTextBox.Location = new System.Drawing.Point(13, 46);
+            this.WordsTextBox.Multiline = true;
+            this.WordsTextBox.Name = "WordsTextBox";
+            this.WordsTextBox.Size = new System.Drawing.Size(160, 213);
+            this.WordsTextBox.TabIndex = 0;
+            this.WordsTextBox.Text = "Даниил\r\nВолков\r\nВадимович\r\nНиколай\r\nПетренько";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(983, 324);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(541, 324);
+            this.Controls.Add(this.MainGroup);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Кроссворд";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.MainGroup.ResumeLayout(false);
+            this.MainGroup.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox MainGroup;
+        private System.Windows.Forms.Label ExcessWordsLabel;
+        private System.Windows.Forms.Label UseWordsLabel;
+        private System.Windows.Forms.Label WordsLabel;
         private System.Windows.Forms.Button CreateButton;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox ExcessWordsTextBox;
+        private System.Windows.Forms.TextBox UseWordsTextBox;
+        private System.Windows.Forms.TextBox WordsTextBox;
+        private System.Windows.Forms.TextBox SizeGridTextBox;
+        private System.Windows.Forms.Label SizeGridLabel;
     }
 }
 
